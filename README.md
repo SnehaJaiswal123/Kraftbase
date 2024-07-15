@@ -140,9 +140,78 @@ Create a .env file in root directory with the following environment variables:
     "rating": 4
    }
 
+ ### Restaurant services
 
+#### 1. Update Menu
 
+- **Endpoint:** `PUT /updateMenu`
+- **Description:** Menu of restaurant can be updated.
+- **URL:** `https://kraftbase-k3g6.onrender.com/api/restaurant/updateMenu`
+- **Method:** PUT
+
+- **Request Body:**
+  ```json
+   {
+    "restaurantId": "669417a6b10119110cfed13c",
+    "menu": ["pasta", "Bread"]
+   }
   
+ #### 2. Update Status
+
+- **Endpoint:** `PUT /updateStatus`
+- **Description:** Status of restaurant can be updated.
+- **URL:** `https://kraftbase-k3g6.onrender.com/api/restaurant/updateStatus`
+- **Method:** PUT
+
+- **Request Body:**
+  ```json
+   {
+    "restaurantId": "669417a6b10119110cfed13c",
+    "isOnline": true
+  }
+
+ #### 3. Accept Order
+
+- **Endpoint:** `POST /acceptOrder`
+- **Description:** It accepts order.
+- **URL:** `https://kraftbase-k3g6.onrender.com/api/restaurant/acceptOrder`
+- **Method:** POST
+
+- **Request Body:**
+  ```json
+   {
+    "orderId": "669419fb76d62443ef9d4914"
+   }
+
+#### 4. Reject Order
+
+- **Endpoint:** `POST /rejectOrder`
+- **Description:** It rejects order.
+- **URL:** `https://kraftbase-k3g6.onrender.com/api/restaurant/rejectOrder`
+- **Method:** POST
+
+- **Request Body:**
+  ```json
+   {
+    "orderId": "669419fb76d62443ef9d4914"
+   }
+
+### Restaurant services
+
+#### 1. Update Status
+
+- **Endpoint:** `POST /status`
+- **Description:** Delivery Agent update the status of order.
+- **URL:** `https://kraftbase-k3g6.onrender.com/api/deliveryAgent/status`
+- **Method:** POST
+
+- **Request Body:**
+  ```json
+   {
+    "orderId": "669419fb76d62443ef9d4914",
+    "status":"delivered"
+   }
+
 
 
    
